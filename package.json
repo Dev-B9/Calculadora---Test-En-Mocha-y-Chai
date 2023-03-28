@@ -1,0 +1,16 @@
+{
+  "name": "calculadora-master",
+  "version": "1.0.0",
+  "description": "Esta calculadora cumple los procesos de:",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
