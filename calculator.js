@@ -1,21 +1,22 @@
-function calcular(num1, num2, operacion) {
+function calcular(n1, n2, operacion) {
+
   let resultado;
 
   switch (operacion) {
     case '+':
-      resultado = (num1 + num2).toFixed(2);
+      resultado = (n1 + n2).toFixed(2);
       break;
     case '-':
-      resultado = (num1 - num2).toFixed(2);
+      resultado = (n1 - n2).toFixed(2);
       break;
     case '*':
-      resultado = (num1 * num2).toFixed(2);
+      resultado = (n1 * n2).toFixed(2);
       break;
     case '/':
-      if (num2 === 0) {
+      if (n2 === 0) {
         resultado = 'Operación no válida/indefinida';
       } else {
-        resultado = (num1 / num2).toFixed(2);
+        resultado = (n1 / n2).toFixed(2);
       }
       break;
     default:
