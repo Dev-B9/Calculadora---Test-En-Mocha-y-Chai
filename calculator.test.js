@@ -3,24 +3,24 @@
 const assert = require('chai').assert;
 const calculator = require('./calculator');
 
-describe('Calculator', function() {
+describe('Calculator', ()=> {
   it('Debe retornar la suma de dos numeros', ()=> {
-    assert.equal(calculator.add(6, 3), 9);
+    assert.equal(calculator.calcular(6, 3,"+"), 9);
   })
-  it('Debe retornar la resta de dos numeros', function() {
-    assert.equal(calculator.subtract(3, 3), 0);
+  it('Debe retornar la resta de dos numeros', ()=> {
+    assert.equal(calculator.calcular(3, 3,"-"), 0);
   });
 
-  it('Debe retornar la multiplicacion de dos numeros', function() {
-    assert.equal(calculator.multiplication(1, 5), 5);
+  it('Debe retornar la multiplicacion de dos numeros', ()=> {
+    assert.equal(calculator.calcular(1, 5,"*"), 5);
   });
 
-  it('Debe retornar la divison de dos numeros', function() {
-    assert.equal(calculator.division(10, 3), 3.3);
+  it('Debe retornar la divison de dos numeros', ()=> {
+    assert.equal(calculator.calcular(10, 3,"/"), 3.33);
   });
 
-  it('Debe retornar error al intentar hacer divison de zero', function() {
-    assert.equal(calculator.division(5, 0), "No se permite cociente(0) en campo2");
+  it('Debe retornar error al intentar hacer divison de cero', ()=> {
+    assert.equal(calculator.calcular(5, 0,"/"), "Operación no válida/indefinida");
   });
 
 })

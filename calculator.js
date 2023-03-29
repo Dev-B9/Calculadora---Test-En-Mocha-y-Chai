@@ -1,26 +1,31 @@
-function add(n1, n2) {
-    return n1 + n2;
+function calcular(num1, num2, operacion) {
+  let resultado;
+
+  switch (operacion) {
+    case '+':
+      resultado = (num1 + num2).toFixed(2);
+      break;
+    case '-':
+      resultado = (num1 - num2).toFixed(2);
+      break;
+    case '*':
+      resultado = (num1 * num2).toFixed(2);
+      break;
+    case '/':
+      if (num2 === 0) {
+        resultado = 'Operación no válida/indefinida';
+      } else {
+        resultado = (num1 / num2).toFixed(2);
+      }
+      break;
+    default:
+      resultado = 'Operación no válida';
+      break;
   }
-  
-  function subtract(n1, n2) {
-    return n1 - n2;
-  }
-  
-  function multiplication(n1, n2) {
-    return (n1 * n2).toFixed(1);
-  }
-  
-  function division(n1, n2) {
-    if (n2 === 0) {
-      return "No se permite cociente(0) en campo2";
-    } else {
-      return (n1 / n2).toFixed(1);
-    }
-  }
-  
-  module.exports = {
-    add,
-    subtract,
-    multiplication,
-    division,
-  };
+
+  return resultado;
+}
+
+module.exports = {
+  calcular
+};
